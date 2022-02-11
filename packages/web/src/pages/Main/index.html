@@ -8,9 +8,13 @@
 <body>
 <section class="container" id="container">
 <form class="container__form" id="imageForm">
-  <input id="imageInput" type="file" accept="image/*">
-  <button type="submit">Upload</button>
+  <input type="file" name="file" id="imageInput" class="container__form--inputfile" accept="image/*"/>
+  <label for="imageInput" class='container__form--label'>Choose a image</label>
+  <button class='container__form--submit' type="submit">Submit</button>
 </form>
+</section>
+<section class="content" id="content">
+
 </section>
 </body>
 </html>

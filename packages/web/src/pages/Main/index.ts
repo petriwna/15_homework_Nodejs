@@ -9,6 +9,7 @@ imageForm.addEventListener('submit', async (event) => {
   const file = imageInput.files[0];
 
   const { url } = await fetch('/s3Url').then((res) => res.json());
+  console.log(url);
 
   await fetch(url, {
     method: 'PUT',
@@ -17,10 +18,11 @@ imageForm.addEventListener('submit', async (event) => {
     },
     body: file,
   });
-  const container = document.getElementById('container');
+  const content = document.getElementById('content');
   const imageUrl = url.split('?')[0];
+  console.log(imageUrl);
   const img = document.createElement('img');
-  img.setAttribute('class', 'container--img');
+  img.setAttribute('class', 'content--img');
   img.src = imageUrl;
-  container.append(img);
+  content.append(img);
 });
