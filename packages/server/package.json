@@ -2,7 +2,7 @@
   "name": "server",
   "version": "1.0.0",
   "scripts": {
-    "start": "yarn build && node dist/server.js",
+    "start": "node dist/server.js",
     "build": "tsc",
     "clear": "rimraf dist"
   },
